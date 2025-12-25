@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+  <meta name="theme-color" content="#071026">
+</head>
+
+<body>
+  <header class="nav-wrap">
+    <nav class="nav container" style="padding: .8rem 2rem;">
+      <div class="nav-left">
+        <a class="nav-avatar-link" href="#home" aria-label="Home">
+          <img src="passport size photo IMG_20240116_171745.jpg" alt="avatar" class="nav-avatar">
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li>
+          <a class="nav-resume-btn" href="resume.pdf" target="_blank" aria-label="View Resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                fill="currentColor" />
+            </svg>
+            Resume
+          </a>
+        </li>
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#features">Features</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#testimonial">Testimonial</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-inner">
+        <!-- Left: typewriter + contact -->
+        <div class="hero-left">
+          <h1 class="welcome reveal">WELCOME TO MY WORLD</h1>
+
+          <!-- Typewriter area for name and short title -->
+          <div class="typewriter-area reveal">
+            <div class="typewriter"><span id="type-text"></span><span class="cursor" id="type-cursor">|</span></div>
+            <p id="type-long" class="lead" aria-live="polite"></p>
+          </div>
+
+          <!-- contact card removed per user request -->
+        </div>
+
+        <!-- Right: square frame for photo with 3D tilt effect -->
+        <div class="hero-right">
+          <div class="hero-frame reveal">
+            <div class="frame-wrap" id="frame-tilt">
+              <svg class="frame-ring" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#7c5cff" />
+                    <stop offset="100%" stop-color="#00e5ff" />
+                  </linearGradient>
+                </defs>
+                <rect x="10" y="10" width="100" height="100" rx="14" fill="none" stroke="rgba(255,255,255,0.04)"
+                  stroke-width="4" />
+                <rect class="ring" x="10" y="10" width="100" height="100" rx="14" fill="none" stroke="url(#ringGrad)"
+                  stroke-width="4" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="400" />
+              </svg>
+
+              <div class="frame-img">
+                <img src="passport size photo IMG_20240116_171745.jpg" alt="Hero photo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA buttons removed as requested -->
+        <div class="cta reveal"></div>
+      </div>
+      <div class="floating-shapes">
+        <div class="shape s1"></div>
+        <div class="shape s2"></div>
+      </div>
+    </section>
+
+    <!-- Connect / Skills section (matches requested layout) -->
+    <section id="connect" class="section connect">
+      <div class="container">
+        <div class="connect-grid">
+          <div class="connect-left">
+            <h3 class="small-title">FIND ME IN</h3>
+            <div class="icon-row">
+              <a class="icon-box" href="https://github.com/SandeepKumar72" target="_blank" aria-label="GitHub"
+                title="GitHub">
+                <!-- Inline GitHub logo (octocat) -->
+                <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+              </a>
+              <a class="icon-box" href="#" aria-label="Twitter" title="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 001.88-2.37 8.55 8.55 0 01-2.71 1.03 4.27 4.27 0 00-7.28 3.9A12.11 12.11 0 013 4.79a4.27 4.27 0 001.32 5.7 4.22 4.22 0 01-1.94-.54v.05a4.27 4.27 0 003.42 4.18 4.3 4.3 0 01-1.93.07 4.27 4.27 0 003.99 2.96A8.57 8.57 0 012 19.54a12.08 12.08 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2v-.56A8.72 8.72 0 0024 5.64a8.59 8.59 0 01-2.54.7z" />
+                </svg>
+              </a>
+              <a class="icon-box" href="https://www.linkedin.com/in/sandeep-kumar-4a9651277" target="_blank"
+                aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.6v-5.4c0-1.29-.03-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5h-3.6V9h3.46v1.56h.05c.48-.9 1.66-1.85 3.42-1.85 3.66 0 4.34 2.41 4.34 5.54v6.74zM5.34 7.43a2.09 2.09 0 110-4.18 2.09 2.09 0 010 4.18zM7.14 20.45H3.54V9h3.6v11.45z" />
+                </svg>
+              </a>
+            </div>
+
+            <a class="btn btn-download-large" href="resume.pdf" download>Download Resume</a>
+          </div>
+
+          <div class="connect-right">
+            <h3 class="small-title">BEST SKILL ON</h3>
+            <div class="icon-row">
+              <!-- React icon (atom-like) -->
+              <div class="icon-box" title="React">
+                <svg class="skill-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <g stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <ellipse cx="12" cy="12" rx="6.3" ry="2.6" />
+                    <ellipse cx="12" cy="12" rx="6.3" ry="2.6" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="6.3" ry="2.6" transform="rotate(120 12 12)" />
+                    <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Node.js icon (simplified hexagon) -->
+              <div class="icon-box" title="Node.js">
+                <svg class="skill-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2.2l6.5 3.75v7.5L12 21.9 5.5 13.45v-7.5zM10.9 8.9v6.7l1.9 1.1 1.9-1.1V8.9l-1.9-1.1z" />
+                </svg>
+              </div>
+
+              <!-- TypeScript icon (TS monogram in a square) -->
+              <div class="icon-box" title="TypeScript">
+                <svg class="skill-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="18" rx="2" fill="currentColor" opacity="0.12" />
+                  <text x="50%" y="62%" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9.2"
+                    fill="currentColor" font-weight="700">TS</text>
+                </svg>
+              </div>
+
+              <!-- Firebase icon (simplified flame) -->
+              <div class="icon-box" title="Firebase">
+                <svg class="skill-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2s3 4 3.6 6.7c.5 2.3-1.6 3.8-3.6 6.3-2-2.5-4.1-4-3.6-6.3C9 6 12 2 12 2zM12 17.7l3.4 2.9L12 16.5 8.6 20.6 12 17.7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES section (matches uploaded design) -->
+    <section id="features" class="section features-section">
+      <div class="container">
+        <div class="features-head">
+          <p class="overline">FEATURES</p>
+          <h2 class="section-title large">What I Do</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <!-- mobile icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="9.5" y="3" width="5" height="14" rx="1" />
+                <circle cx="12" cy="17.6" r="0.6" />
+              </svg>
+            </div>
+            <h3 class="feature-title">App Devlopment</h3>
+            <p class="feature-desc">With using some technology :- react-native ,CSS,RestFull API,Node js</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <!-- grid icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="3" width="8" height="8" rx="1.2" />
+                <rect x="13" y="3" width="8" height="8" rx="1.2" />
+                <rect x="3" y="13" width="8" height="8" rx="1.2" />
+                <rect x="13" y="13" width="8" height="8" rx="1.2" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Web Devlopment</h3>
+            <p class="feature-desc">With using some technology :- React,CSS,Tailwind,RestFull API,Node js,Express js</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <!-- database icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d="M12 3c-4.97 0-9 1.79-9 4v2c0 2.21 4.03 4 9 4s9-1.79 9-4V7c0-2.21-4.03-4-9-4zm0 6c-4.97 0-9 1.79-9 4v2c0 2.21 4.03 4 9 4s9-1.79 9-4v-2c0-2.21-4.03-4-9-4z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Database Designer</h3>
+            <p class="feature-desc">I know about mongoDB,mySQL,SQL server,postgress and many more. with using DFD,ERD &
+              Normalization</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <!-- test tube icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 2l10 6-4 10H11L7 2z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Testing</h3>
+            <p class="feature-desc">With using some techniqu :- Unit ,Integration,System & User Acceptance Testing</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="projects" class="section projects-hero">
+      <div class="container">
+        <p class="projects-overline">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</p>
+
+        <div class="projects-head">
+          <div class="projects-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="6" fill="url(#pb)" />
+              <g fill="#fff" opacity="0.95">
+                <rect x="8" y="7" width="8" height="1.5" rx="0.5" />
+                <rect x="8" y="10" width="8" height="6" rx="1" />
+              </g>
+              <defs>
+                <linearGradient id="pb" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#7c5cff" />
+                  <stop offset="100%" stop-color="#00e5ff" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <h2 class="projects-title">My Projects</h2>
+        </div>
+
+        <div class="projects-filter-wrap">
+          <div class="projects-filter" role="tablist" aria-label="Project categories">
+            <button class="filter-pill active" role="tab" aria-selected="true">✨ All</button>
+            <button class="filter-pill" role="tab">&lt;/&gt; Web App</button>
+            <button class="filter-pill" role="tab">🎯 Freelance</button>
+            <button class="filter-pill" role="tab">🛒 E-Commerce</button>
+            <button class="filter-pill" role="tab">💼 Service</button>
+            <button class="filter-pill" role="tab">✨ 3D App</button>
+            <button class="filter-pill" role="tab">&lt;/&gt;</button>
+          </div>
+
+          <button class="filter-nav prev" aria-label="Previous categories">‹</button>
+          <button class="filter-nav next" aria-label="Next categories">›</button>
+        </div>
+
+        <div class="cards project-grid-detailed">
+          <!-- Card 1 -->
+          <article class="project-card reveal">
+            <div class="project-poster">
+              <div class="poster-inner">
+                <!-- Using a placeholder that resembles a dark UI screenshot -->
+                <div class="poster-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Orgix Media - Digital Growth & Business...</h3>
+              <p class="project-desc">A freelance project for Orgix Media, focused on creating a digital growth and
+                business website with interactive UI...</p>
+
+              <div class="project-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="btn-action btn-demo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="#" class="btn-action btn-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card reveal">
+            <div class="project-poster">
+              <div class="poster-inner">
+                <div class="poster-placeholder" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Pari Media – Digital Growth & Business...</h3>
+              <p class="project-desc">A freelance project for Pari Media, focusing on creating a digital presence that
+                enhances business outreach and...</p>
+
+              <div class="project-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="btn-action btn-demo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="#" class="btn-action btn-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card reveal">
+            <div class="project-poster">
+              <div class="poster-inner">
+                <div class="poster-placeholder" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Social Media (Rapid Blog)</h3>
+              <p class="project-desc">Rapid-blog is a social media platform designed for meaningful connections and
+                vibrant communities. Users can create...</p>
+
+              <div class="project-tags">
+                <span class="tag tag-react">React</span>
+                <span class="tag tag-mongo">MongoDB</span>
+                <span class="tag tag-express">Express.js</span>
+                <span class="tag tag-node">Node.js</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="btn-action btn-demo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="#" class="btn-action btn-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="project-card reveal">
+            <div class="project-poster">
+              <div class="poster-inner">
+                <div class="poster-placeholder" style="background: linear-gradient(135deg, #000428 0%, #004e92 100%);">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)"
+                    stroke-width="1">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Digital Product Sell</h3>
+              <p class="project-desc">An all-in-one platform to sell digital products like eBooks, videos, designs, and
+                files. Upload, manage, and securely deliver...</p>
+
+              <div class="project-tags">
+                <span class="tag tag-react">React</span>
+                <span class="tag tag-mongo">MongoDB</span>
+                <span class="tag tag-express">Express.js</span>
+                <span class="tag tag-node">Node.js</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="btn-action btn-demo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+                <a href="#" class="btn-action btn-code">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" class="section resume-section">
+      <div class="container">
+        <div class="features-head center-head">
+          <p class="overline">7+ YEARS OF EXPERIENCE</p>
+          <h2 class="section-title large">My Resume</h2>
+        </div>
+
+        <div class="resume-tabs" role="tablist">
+          <button class="tab-btn active" data-tab="skills" role="tab" aria-selected="true">Professional Skills</button>
+          <button class="tab-btn" data-tab="education" role="tab" aria-selected="false">Education</button>
+          <button class="tab-btn" data-tab="experience" role="tab" aria-selected="false">Experience</button>
+          <button class="tab-btn" data-tab="practical" role="tab" aria-selected="false">Practical Education</button>
+        </div>
+
+        <div class="resume-body">
+          <!-- Professional Skills Tab -->
+          <div class="resume-content active" id="skills">
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h3>Design Skills</h3>
+                <div class="skill-item">
+                  <div class="skill-info"><span>Photoshop</span><span>90%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info"><span>Figma</span><span>85%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info"><span>Adobe BS</span><span>70%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:70%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h3>Development Skills</h3>
+                <div class="skill-item">
+                  <div class="skill-info"><span>HTML5 / CSS3</span><span>95%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info"><span>JavaScript / React</span><span>88%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:88%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info"><span>Node.js / Express</span><span>82%</span></div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width:82%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Tab -->
+          <div class="resume-content" id="education">
+            <div class="timeline-grid">
+              <div class="timeline-col">
+                <h3 class="timeline-head">Education Quality</h3>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>BCA  in Computer Science</h4>
+                    <span class="card-sub">Iimt University Meerut</U> (2022 - 2025)</span>
+                    <span class="card-grade">3.8/4</span>
+                  </div>
+                  <p class="card-text">Detailed academic journey focusing on software engineering principles,
+                    algorithms, and system design.</p>
+                </article>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>Secondary School Education</h4>
+                    <span class="card-sub">Dp Roy Collage Siwan  (2020 - 2022)</span>
+                    <span class="card-grade">4.8/5</span>
+                  </div>
+                  <p class="card-text">Specialized in Mathematics and Computer Science, building a strong foundation for
+                    future engineering studies.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Tab -->
+          <div class="resume-content" id="experience">
+            <div class="timeline-grid">
+              <div class="timeline-col">
+                <h3 class="timeline-head">Job Experience</h3>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>Senior Web Developer</h4>
+                    <span class="card-sub">Tech Solutions Inc. (2022 - Present)</span>
+                    <span class="card-grade">Full Time</span>
+                  </div>
+                  <p class="card-text">Leading frontend development team, migrating legacy apps to React, and improving
+                    site performance by 40%.</p>
+                </article>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>Web Developer Intern</h4>
+                    <span class="card-sub">Creative Agency (2021 - 2022)</span>
+                    <span class="card-grade">Internship</span>
+                  </div>
+                  <p class="card-text">Assisted in building client websites, implementing responsive designs, and
+                    optimizing SEO.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practical Education Tab -->
+          <div class="resume-content" id="practical">
+            <div class="timeline-grid">
+              <div class="timeline-col">
+                <h3 class="timeline-head">Practical Training</h3>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>Full Stack Web Development Bootcamp</h4>
+                    <span class="card-sub">Udemy (2020)</span>
+                    <span class="card-grade">Certified</span>
+                  </div>
+                  <p class="card-text">Intensive 6-month bootcamp covering MERN stack, deployment, and real-world
+                    project building.</p>
+                </article>
+                <article class="timeline-card">
+                  <div class="card-head">
+                    <h4>Advanced React Workshop</h4>
+                    <span class="card-sub">Frontend Masters (2021)</span>
+                    <span class="card-grade">Workshop</span>
+                  </div>
+                  <p class="card-text">Deep dive into hooks, context API, performance optimization, and scalable
+                    architecture patterns.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="section testimonial-section">
+      <div class="container">
+        <div class="features-head center-head">
+          <p class="overline">WHAT CLIENTS SAY</p>
+          <h2 class="section-title large">Testimonial</h2>
+        </div>
+
+        <div class="testimonial-wrapper">
+          <!-- Left Arrow -->
+          <button class="slide-btn prev-slide" aria-label="Previous Testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+
+          <!-- Main Card -->
+          <div class="testimonial-card custom-glass">
+            <div class="testi-header">
+              <div class="testi-user-group">
+                <div class="testi-info">
+                  <h3 class="client-name">Lucky Pandey</h3>
+                  <p class="client-role">WOS CO-Founder</p>
+                  <p class="client-country">India</p>
+                </div>
+                <!-- Project info on the right or below, matching image layout -->
+                <div class="testi-project">
+                  <h4 class="project-title">Publication Web App Design</h4>
+                  <p class="project-via">via personal</p>
+                  <div class="stars">
+                    <svg class="star filled" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg class="star filled" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg class="star filled" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg class="star filled" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg class="star filled" viewBox="0 0 24 24">
+                      <path fill="currentColor"
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="testi-divider">
+
+            <div class="testi-body">
+              <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                </path>
+              </svg>
+              <p class="testi-text">
+                The publication web app has exceeded my expectations in terms of design and usability. The sleek,
+                intuitive interface makes content management seamless, allowing us to easily publish and organize
+                articles. The responsive design ensures our readers have a great experience on both desktop and mobile.
+                As a founder, I appreciate how quickly I can manage posts and track performance. There’s still room for
+                improvement with advanced analytics and some UX refinements, but overall, it’s an outstanding platform
+                that has streamlined our publishing process.
+              </p>
+            </div>
+
+            <div class="testi-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+          <!-- Right Arrow -->
+          <button class="slide-btn next-slide" aria-label="Next Testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="features-head center-head">
+          <p class="overline">CONTACT</p>
+          <h2 class="section-title large">Contact With Me</h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left: Profile Card -->
+          <div class="contact-card-profile reveal">
+            <div class="profile-image-wrap">
+              <img src="passport size photo IMG_20240116_171745.jpg" alt="Profile" class="profile-img">
+            </div>
+            <div class="profile-info">
+              <h3 class="profile-name">Sandeep Kumar</h3>
+              <p class="profile-role">Full Stack Developer & Software Engineer</p>
+              <p class="profile-desc">
+                I am a dedicated software developer specializing in designing, coding, testing, and
+                deploying web applications. I love building user-friendly interfaces and robust backend systems.
+              </p>
+              <div class="profile-social">
+                <a href="https://www.linkedin.com/in/sandeep-kumar-4a9651277" target="_blank" class="social-link"
+                  aria-label="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                  </svg>
+                </a>
+                <a href="https://github.com/SandeepKumar72" target="_blank" class="social-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                  </svg>
+                </a>
+                <a href="mailto:you@example.com" class="social-link" aria-label="Email">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <form class="contact-form reveal" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">YOUR NAME</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 1234567890">
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="subject">SUBJECT</label>
+              <input type="text" id="subject" name="subject" placeholder="Enter subject">
+            </div>
+            <div class="form-group full-width">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Left: Profile Section -->
+        <div class="footer-profile">
+          <div class="footer-avatar-wrap">
+            <img src="passport size photo IMG_20240116_171745.jpg" alt="Sandeep Kumar" class="footer-avatar">
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/917042454150?text=Hello%20Sandeep,%20I'm%20interested%20in%20your%20services!"
+              target="_blank" class="footer-social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.03a11.854 11.854 0 001.604 5.922L0 24l6.117-1.605a11.847 11.847 0 005.933 1.607h.005c6.632 0 12.028-5.391 12.031-12.028a11.85 11.85 0 00-3.674-8.52z" />
+              </svg>
+            </a>
+            <a href="https://github.com/SandeepKumar72" target="_blank" class="footer-social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sandeep-kumar-4a9651277" target="_blank" class="footer-social-link"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Link Columns -->
+        <div class="footer-links-grid">
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">QUICK LINK</h4>
+            <ul class="footer-list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Portfolio</a></li>
+              <li><a href="#features">Services</a></li>
+              <li><a href="#testimonial">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">RESOURCES</h4>
+            <ul class="footer-list">
+              <li><a href="#">Authentication</a></li>
+              <li><a href="#">System Status</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Over Right</a></li>
+            </ul>
+          </div>
+
+          <!-- Developers -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">DEVELOPERS</h4>
+            <ul class="footer-list">
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Authentication</a></li>
+              <li><a href="#">API Reference</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Open Source</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Sandeep Kumar. All rights reserved.</p>
+        <p class="footer-credit">Designed & Developed with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/917042454150?text=Hello%20Sandeep,%20I'm%20interested%20in%20your%20services!"
+    class="whatsapp-float" id="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 2.094.887 3.134.888 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.765-5.756-5.765zm3.377 8.235c-.147.414-.715.757-1.02.77-.295.013-.578.117-1.85-.386-1.536-.606-2.522-2.179-2.599-2.28-.076-.101-.617-.82-.617-1.563 0-.743.388-1.109.527-1.256.14-.147.305-.185.405-.185.1 0 .201.002.288.006.09.004.21-.034.329.255.123.298.423 1.031.459 1.105.036.073.06.158.012.254-.048.096-.072.155-.144.239-.072.083-.151.186-.216.25-.072.072-.147.15-.063.294.084.144.374.618.804 1.002.554.494 1.021.647 1.165.72.144.072.228.059.312-.039.083-.098.358-.417.454-.56.095-.142.191-.12.322-.072.13.048.823.388.966.459.143.071.238.107.273.167.036.06.036.347-.111.761zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.658 1.439 5.167L2 22l4.993-1.314C8.428 21.516 10.141 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.734 0-3.348-.521-4.697-1.41l-.337-.22-2.906.765.779-2.844-.241-.383C3.652 14.791 3 13.018 3 11.13c0-4.89 3.979-8.87 8.87-8.87 4.889 0 8.87 3.98 8.87 8.87S16.889 20 12 20z" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

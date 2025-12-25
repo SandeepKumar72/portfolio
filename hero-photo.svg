@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#071026"/>
+  <g transform="translate(200,180)">
+    <circle r="110" fill="url(#g1)" opacity="0.14"/>
+    <circle r="96" fill="#071026"/>
+    <text x="0" y="10" font-family="Inter, Arial, sans-serif" font-size="28" fill="#9aa7bd" text-anchor="middle">Your Photo</text>
+    <text x="0" y="46" font-family="Inter, Arial, sans-serif" font-size="14" fill="#9aa7bd" text-anchor="middle">Replace with JPG/PNG</text>
+  </g>
+</svg>
